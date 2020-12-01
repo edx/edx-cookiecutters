@@ -1,7 +1,7 @@
 {{cookiecutter.project_name}}
 =============================
 
-|pypi-badge| |travis-badge| |codecov-badge| |doc-badge| |pyversions-badge|
+|pypi-badge| |ci-badge| |codecov-badge| |doc-badge| |pyversions-badge|
 |license-badge|
 
 The ``README.rst`` file should start with a brief description of the repository,
@@ -117,9 +117,9 @@ For more information about these options, see the `Getting Help`_ page.
     :target: https://pypi.python.org/pypi/{{ cookiecutter.repo_name }}/
     :alt: PyPI
 
-.. |travis-badge| image:: https://travis-ci.com/edx/{{ cookiecutter.repo_name }}.svg?branch=master
-    :target: https://travis-ci.com/edx/{{ cookiecutter.repo_name }}
-    :alt: Travis
+.. |ci-badge| image:: https://github.com/edx/{{ cookiecutter.repo_name }}/workflows/Python%20CI/badge.svg?branch=master
+    :target: https://github.com/edx/{{ cookiecutter.repo_name }}/actions
+    :alt: CI
 
 .. |codecov-badge| image:: https://codecov.io/github/edx/{{ cookiecutter.repo_name }}/coverage.svg?branch=master
     :target: https://codecov.io/github/edx/{{ cookiecutter.repo_name }}?branch=master

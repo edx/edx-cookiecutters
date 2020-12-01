@@ -2,7 +2,7 @@
 Cookiecutter Django Package
 ===========================
 
-|travis-badge| |license-badge|
+|ci-badge| |license-badge|
 
 A cookiecutter_ template for creating reusable Django packages (installable apps) quickly.
 If you're creating a standalone Django service, you should probably use
@@ -17,7 +17,7 @@ Features
 --------
 
 * Sane setup.py for easy PyPI registration/distribution
-* Travis-CI configuration
+* Github Actions for CI configuration
 * Codecov configuration
 * Tox configuration
 * Sphinx Documentation
@@ -32,12 +32,12 @@ it ``blogging_for_humans``) and set up your virtual environment with your
 favorite method.  If you are an edX employee, request a new repo in the
 ``edx`` organization by submitting an ITSUPPORT ticket.  Details are in the
 `How to request a new GitHub repo`_ wiki page. This ticket should also
-request that Travis and Codecov be enabled for the new repository.
+request that Github Actions and Codecov be enabled for the new repository.
 
 .. _How to request a new GitHub repo: https://openedx.atlassian.net/wiki/pages/viewpage.action?pageId=70385719
 
 **Note**: Your project will be created with README.rst file containing a pypi
-badge, a travis-ci badge and a link to documentation on readthedocs.org. You
+badge, a Github Actions CI badge and a link to documentation on readthedocs.org. You
 don't need to have these accounts set up before using Cookiecutter or
 cookiecutter-django-app.
 
@@ -101,9 +101,9 @@ Code has been written, but does it actually work? Let's find out!
 Github Checks
 ~~~~~~~~~~~~~
 
-On your first PR, ensure Travis and Codecov checks are running.
+On your first PR, ensure Github Actions and Codecov checks are running.
 
-If Travis is not running, you can activate manually at https://travis-ci.com/edx/edx-cookiecutters
+If Github Actions are not running, you can look their state here https://github.com/edx/edx-cookiecutters/actions
 
 If Codecov is not running, complete an ITSUPPORT ticket.
 
@@ -113,20 +113,19 @@ Register on PyPI
 Once you have at least a prototype working and tests running, it's time to
 register the application on PyPI.
 
-If you are an edX employee,
-`Open a Devops General Request ticket`_ to do this.  Simply ask for the Travis
-encrypted password, specifying the new repository name. You can then follow
-these instructions for `Publishing a Package to PyPI using Travis`_.
+You should use PyPa's official Github action: https://github.com/marketplace/actions/pypi-publish
+to publish your package to PyPi in your Github workflow file you'd need to add the following
 
-This avoids the need to distribute the password for the edx PyPI account too
-widely.
+::
 
-If you are not an edX employee, you can follow the instructions in the Python
-Packaging User Guide on `uploading your project to PyPI`_.
+    - name: Publish the package to PyPi
+      uses: pypa/gh-action-pypi-publish@master
+      with:
+        user: __token__
+        password: ${{ secrets.PYPI_UPLOAD_TOKEN }}
 
-.. _Open a Devops General Request ticket: https://openedx.atlassian.net/servicedesk/customer/portal/3/create/36
-.. _Publishing a Package to PyPI using Travis: https://openedx.atlassian.net/wiki/spaces/OpenOPS/pages/41911049/Publishing+a+Package+to+PyPI+using+Travis
-.. _uploading your project to PyPI: https://packaging.python.org/distributing/#uploading-your-project-to-pypi
+
+``PY_UPLOAD_TOKEN`` is available organization wide edX repos via Github secrets.
 
 Releasing on PyPI
 ~~~~~~~~~~~~~~~~~
@@ -136,6 +135,8 @@ module's ``__init__.py`` file, update ``CHANGELOG.rst`` accordingly, and run::
 
     $ python setup.py tag
 
+and create a Github release with new tag, your Github workflow should automatically run once a new release is
+created and should publish the package to PyPi
 
 Add to Django Packages
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -175,9 +176,9 @@ refer to this `list of resources`_ if you need any assistance.
 .. _list of resources: https://open.edx.org/getting-help
 
 
-.. |travis-badge| image:: https://travis-ci.com/edx/edx-cookiecutters.svg?branch=master
-    :target: https://travis-ci.com/edx/edx-cookiecutters
-    :alt: Travis
+.. |ci-badge| image:: https://github.com/edx/edx-django-utils/workflows/Python%20CI/badge.svg?branch=master
+    :target: https://github.com/edx/edx-django-utils/actions
+    :alt: CI
 
 .. |license-badge| image:: https://img.shields.io/github/license/edx/cookiecutter-django-app.svg
     :target: https://github.com/edx/cookiecutter-django-app/blob/master/LICENSE.txt

@@ -20,7 +20,7 @@ The necessary configuration is also in place to support:
 * Authentication with OAuth2
 * Loading settings from YAML (for production)
 * Pylint/Pycodestyle validation
-* Travis CI
+* Github Actions for CI
 
 .. _Sphinx: https://sphinx-doc.org/
 

@@ -113,10 +113,10 @@ def test_urls(options_baked):
     assert basic_url in urls_file_txt
 
 
-def test_travis(options_baked):
-    """The generated .travis.yml file should pass a sanity check."""
-    travis_text = Path(".travis.yml").read_text()
-    assert 'pip install -r requirements/travis.txt' in travis_text
+def test_github_actions_ci():
+    """The generated ci.yml file should pass a sanity check."""
+    ci_text = Path(".github/workflows/ci.yml").read_text()
+    assert 'pip install -r requirements/ci.txt' in ci_text
 
 
 def test_app_config(options_baked):

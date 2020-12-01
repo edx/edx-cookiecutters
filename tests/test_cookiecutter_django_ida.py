@@ -32,6 +32,7 @@ logging.config.dictConfig(LOGGING_CONFIG)
 common = {
     "app_name": "cookie_lover",
     "repo_name": "cookie_repo",
+    "matrix": {}
 }
 
 configurations = [
@@ -87,10 +88,10 @@ def test_readme(options_baked, custom_template):
         pytest.fail(str(exc))
 
 
-def test_travis(options_baked):
-    """The generated .travis.yml file should pass a sanity check."""
-    travis_text = Path(".travis.yml").read_text()
-    assert 'pip install -r requirements/travis.txt' in travis_text
+def test_github_actions_ci(options_baked):
+    """The generated ci.yml file should pass a sanity check."""
+    ci_text = Path(".github/workflows/ci.yml").read_text()
+    assert 'pip install -r requirements/ci.txt' in ci_text
 
 
 def test_upgrade(options_baked):
