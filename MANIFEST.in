@@ -1,0 +1,5 @@
+include CHANGELOG.rst
+include LICENSE.txt
+include README.rst
+include requirements/base.in
+recursive-include utils_edx_cookiecutters *.html *.png *.gif *.js *.css *.jpg *.jpeg *.svg *.py

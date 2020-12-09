@@ -1,8 +1,9 @@
-import os
-import re
-from contextlib import contextmanager
+"""
+    Functions to help test cookiecutters
+"""
 
-import unittest
+import os
+from contextlib import contextmanager
 
 
 @contextmanager
