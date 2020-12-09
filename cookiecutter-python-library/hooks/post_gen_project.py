@@ -4,31 +4,10 @@ Post-generation cookiecutter hook.
 * See docs/decisions/0003-layered-cookiecutter.rst
 """
 import os
-import shutil
 
-from cookiecutter.main import cookiecutter
-from edx_lint.cmd.write import write_main
+from utils_edx_cookiecutters.layered_cookiecutter import LayeredCookiecutter
 
-# cookiecutter can import a template from either github or from a location on local disk.
-# If someone is debugging this repository locally, the below block is necessary to pull in
-#   local versions of the templates
-EDX_COOKIECUTTER_ROOTDIR = os.getenv('EDX_COOKIECUTTER_ROOTDIR') or 'https://github.com/edx/edx-cookiecutters.git'
-
-
-def move(src, dest):
-    """
-    Use to move files or folders without replacement.
-    """
-    if os.path.isfile(dest):
-        os.remove(src)
-        return
-    if os.path.isdir(src) and os.path.isdir(dest):
-        dir_contents = os.listdir(src)
-        for content in dir_contents:
-            move(os.path.join(src, content), os.path.join(dest, content))
-        os.rmdir(src)
-    else:
-        shutil.move(src, dest)
+layered_cookiecutter = LayeredCookiecutter(os.getcwd())
 
 
 # Using the template to create things
@@ -44,23 +23,6 @@ extra_context["open_source_license"] = "{{cookiecutter.open_source_license}}"
 
 extra_context["placeholder_repo_name"] = "placeholder_repo_name"
 
-cookiecutter(
-    EDX_COOKIECUTTER_ROOTDIR,
-    extra_context=extra_context,
-    no_input=True,
-    directory='python-template',
-)
+layered_cookiecutter.add_template(template_name='python-template', extra_context=extra_context)
 
-# moving templated cookie-cutter output to root
-project_root_dir = os.getcwd()
-python_cookiecutter_output_loc = os.path.join(project_root_dir, extra_context["placeholder_repo_name"])
-files = os.listdir(python_cookiecutter_output_loc)
-
-for f in files:
-    move(os.path.join(python_cookiecutter_output_loc, f), os.path.join(project_root_dir, f))
-
-# removing temp dir created by templated cookiecutter
-os.rmdir(python_cookiecutter_output_loc)
-
-# Post build fixes
-write_main(['pylintrc'])
+layered_cookiecutter.create_cookiecutter()
