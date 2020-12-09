@@ -4,6 +4,7 @@
 #
 #    make upgrade
 #
+-e .
 alabaster==0.7.12         # via sphinx
 appdirs==1.4.4            # via virtualenv
 arrow==0.13.2             # via -c requirements/constraints.txt, -r requirements/base.txt, jinja2-time, pytest-cookies

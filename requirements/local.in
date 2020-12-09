@@ -1,0 +1,2 @@
+# This is added so make requirements will auto install this edx-cookiecutter repository
+-e .
