@@ -11,6 +11,7 @@ from edx_lint.cmd.write import write_main
 
 from .run_make import run_make
 
+
 class LayeredCookiecutter():
     """
     Class to help facilitate usage of the layered cookiecutter approach
