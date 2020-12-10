@@ -39,7 +39,7 @@ class LayeredCookiecutter():
             return
         if src.is_dir() and dest.is_dir():
             for content in src.iterdir():
-                self.move(src / content, dest / content)
+                self.move(content, dest / content.name)
             src.rmdir()
         else:
             shutil_move(src, dest)
@@ -87,8 +87,10 @@ class LayeredCookiecutter():
 
             template_output_loc = self.project_rootdir / Path(template["extra_context"]["placeholder_repo_name"])
             for f in template_output_loc.iterdir():
-                self.move(template_output_loc / f, self.project_rootdir / f.name)
+                self.move(f, self.project_rootdir / f.name)
 
+            # make sure placeholder_repo is deleted after everything has been moved out
+            template["remove_object"].append(template["extra_context"]["placeholder_repo_name"])
             for object_name in template["remove_object"]:
                 self.remove(object_name)
             # Post build fixes

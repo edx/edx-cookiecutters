@@ -5,8 +5,6 @@ Post-generation cookiecutter hook.
 """
 import os
 
-from edx_lint.cmd.write import write_main
-
 from utils_edx_cookiecutters.layered_cookiecutter import LayeredCookiecutter
 
 layered_cookiecutter = LayeredCookiecutter(os.getcwd())
@@ -27,5 +25,3 @@ extra_context["placeholder_repo_name"] = "placeholder_repo_name"
 layered_cookiecutter.add_template(template_name='python-template', extra_context=extra_context)
 
 layered_cookiecutter.create_cookiecutter()
-
-write_main(['pylintrc'])
