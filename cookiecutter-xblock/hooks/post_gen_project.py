@@ -32,8 +32,6 @@ setup_py_keyword_args = """entry_points={
 extra_context["setup_py_keyword_args"] = setup_py_keyword_args
 extra_context["placeholder_repo_name"] = "placeholder_repo_name"
 
-
 layered_cookiecutter.add_template(template_name='python-template', extra_context=extra_context)
 
-# Post build fixes
-write_main(['pylintrc'])
+layered_cookiecutter.create_cookiecutter()
