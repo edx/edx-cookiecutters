@@ -9,6 +9,7 @@ from shutil import rmtree as shutil_rmtree
 from cookiecutter.main import cookiecutter
 from edx_lint.cmd.write import write_main
 
+from .run_make import run_make
 
 class LayeredCookiecutter():
     """
@@ -95,3 +96,4 @@ class LayeredCookiecutter():
                 self.remove(object_name)
             # Post build fixes
             write_main(['pylintrc'])
+            run_make('upgrade')
