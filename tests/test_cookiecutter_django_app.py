@@ -102,7 +102,7 @@ def test_models(options_baked):
         pytest.skip("No models to check")
     model_txt = Path("cookie_lover/models.py").read_text()
     for model_name in options_baked.get("models").split(","):
-        pattern = r'^class {}\(TimeStampedModel\):$'.format(model_name)
+        pattern = fr'^class {model_name}\(TimeStampedModel\):$'
         assert re.search(pattern, model_txt, re.MULTILINE)
 
 

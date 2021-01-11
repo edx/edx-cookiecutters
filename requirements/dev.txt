@@ -5,62 +5,62 @@
 #    make upgrade
 #
 alabaster==0.7.12         # via -r requirements/test.txt, sphinx
-appdirs==1.4.4            # via -r requirements/test.txt, -r requirements/ci.txt, virtualenv
+appdirs==1.4.4            # via -r requirements/ci.txt, -r requirements/test.txt, virtualenv
 arrow==0.13.2             # via -c requirements/constraints.txt, -r requirements/test.txt, jinja2-time, pytest-cookies
-astroid==2.3.3            # via -r requirements/test.txt, pylint, pylint-celery
+astroid==2.4.2            # via -r requirements/test.txt, pylint, pylint-celery
 attrs==20.3.0             # via -r requirements/test.txt, pytest
 babel==2.9.0              # via -r requirements/test.txt, sphinx
 binaryornot==0.4.4        # via -r requirements/test.txt, cookiecutter
 bleach==3.2.1             # via -r requirements/test.txt, readme-renderer
-certifi==2020.11.8        # via -r requirements/test.txt, requests
-chardet==3.0.4            # via -r requirements/test.txt, binaryornot, doc8, requests
+certifi==2020.12.5        # via -r requirements/test.txt, requests
+chardet==4.0.0            # via -r requirements/test.txt, binaryornot, doc8, requests
 click-log==0.3.2          # via -r requirements/test.txt, edx-lint
 click==7.1.2              # via -r requirements/pip-tools.txt, -r requirements/test.txt, click-log, cookiecutter, edx-lint, pip-tools
 cookiecutter==1.7.2       # via -r requirements/test.txt, pytest-cookies
-distlib==0.3.1            # via -r requirements/test.txt, -r requirements/ci.txt, virtualenv
-django-model-utils==4.0.0  # via -r requirements/test.txt
+distlib==0.3.1            # via -r requirements/ci.txt, -r requirements/test.txt, virtualenv
+django-model-utils==4.1.1  # via -r requirements/test.txt
 django==2.2.17            # via -c requirements/constraints.txt, -r requirements/test.txt, django-model-utils
 doc8==0.8.1               # via -r requirements/test.txt
 docutils==0.16            # via -r requirements/test.txt, doc8, readme-renderer, restructuredtext-lint, sphinx
-edx-lint==1.5.2           # via -r requirements/test.txt
-edx-sphinx-theme==1.5.0   # via -r requirements/test.txt
-filelock==3.0.12          # via -r requirements/test.txt, -r requirements/ci.txt, tox, virtualenv
+edx-lint==1.6             # via -r requirements/test.txt
+edx-sphinx-theme==1.6.0   # via -r requirements/test.txt
+filelock==3.0.12          # via -r requirements/ci.txt, -r requirements/test.txt, tox, virtualenv
 idna==2.10                # via -r requirements/test.txt, requests
 imagesize==1.2.0          # via -r requirements/test.txt, sphinx
-isort==4.3.21             # via -r requirements/test.txt, pylint
+isort==5.7.0              # via -r requirements/test.txt, pylint
 jinja2-time==0.2.0        # via -r requirements/test.txt, cookiecutter
 jinja2==2.11.2            # via -r requirements/test.txt, cookiecutter, jinja2-time, sphinx
 lazy-object-proxy==1.4.3  # via -r requirements/test.txt, astroid
 markupsafe==1.1.1         # via -r requirements/test.txt, cookiecutter, jinja2
 mccabe==0.6.1             # via -r requirements/test.txt, pylint
 more-itertools==8.6.0     # via -r requirements/test.txt, pytest
-packaging==20.4           # via -r requirements/test.txt, -r requirements/ci.txt, bleach, pytest, sphinx, tox
+packaging==20.8           # via -r requirements/ci.txt, -r requirements/test.txt, bleach, pytest, sphinx, tox
 pbr==5.5.1                # via -r requirements/test.txt, stevedore
-pip-tools==5.4.0          # via -r requirements/pip-tools.txt
-pluggy==0.13.1            # via -r requirements/test.txt, -r requirements/ci.txt, pytest, tox
+pip-tools==5.5.0          # via -r requirements/pip-tools.txt
+pluggy==0.13.1            # via -r requirements/ci.txt, -r requirements/test.txt, pytest, tox
 poyo==0.5.0               # via -r requirements/test.txt, cookiecutter
-py==1.9.0                 # via -r requirements/test.txt, -r requirements/ci.txt, pytest, tox
+py==1.10.0                # via -r requirements/ci.txt, -r requirements/test.txt, pytest, tox
 pycodestyle==2.6.0        # via -r requirements/test.txt
 pydocstyle==5.1.1         # via -r requirements/test.txt
-pygments==2.7.2           # via -r requirements/test.txt, doc8, readme-renderer, sphinx
+pygments==2.7.3           # via -r requirements/test.txt, doc8, readme-renderer, sphinx
 pylint-celery==0.3        # via -r requirements/test.txt, edx-lint
-pylint-django==2.0.11     # via -r requirements/test.txt, edx-lint
+pylint-django==2.3.0      # via -r requirements/test.txt, edx-lint
 pylint-plugin-utils==0.6  # via -r requirements/test.txt, pylint-celery, pylint-django
-pylint==2.4.4             # via -r requirements/test.txt, edx-lint, pylint-celery, pylint-django, pylint-plugin-utils
-pyparsing==2.4.7          # via -r requirements/test.txt, -r requirements/ci.txt, packaging
+pylint==2.6.0             # via -r requirements/test.txt, edx-lint, pylint-celery, pylint-django, pylint-plugin-utils
+pyparsing==2.4.7          # via -r requirements/ci.txt, -r requirements/test.txt, packaging
 pytest-cookies==0.5.1     # via -r requirements/test.txt
 pytest==5.4.3             # via -r requirements/test.txt, pytest-cookies
 python-dateutil==2.8.1    # via -r requirements/test.txt, arrow
 python-slugify==4.0.1     # via -r requirements/test.txt, cookiecutter
-pytz==2020.4              # via -r requirements/test.txt, babel, django
+pytz==2020.5              # via -r requirements/test.txt, babel, django
 readme-renderer==28.0     # via -r requirements/test.txt
-requests==2.25.0          # via -r requirements/test.txt, cookiecutter, sphinx
+requests==2.25.1          # via -r requirements/test.txt, cookiecutter, sphinx
 restructuredtext-lint==1.3.2  # via -r requirements/test.txt, doc8
 sh==1.14.1                # via -r requirements/test.txt
-six==1.15.0               # via -r requirements/pip-tools.txt, -r requirements/test.txt, -r requirements/ci.txt, astroid, bleach, cookiecutter, doc8, edx-lint, edx-sphinx-theme, packaging, pip-tools, python-dateutil, readme-renderer, tox, virtualenv
+six==1.15.0               # via -r requirements/ci.txt, -r requirements/test.txt, astroid, bleach, cookiecutter, doc8, edx-lint, edx-sphinx-theme, python-dateutil, readme-renderer, tox, virtualenv
 snowballstemmer==2.0.0    # via -r requirements/test.txt, pydocstyle, sphinx
-sphinx-rtd-theme==0.5.0   # via -r requirements/test.txt
-sphinx==3.3.1             # via -r requirements/test.txt, edx-sphinx-theme, sphinx-rtd-theme
+sphinx-rtd-theme==0.5.1   # via -r requirements/test.txt
+sphinx==3.4.3             # via -r requirements/test.txt, edx-sphinx-theme, sphinx-rtd-theme
 sphinxcontrib-applehelp==1.0.2  # via -r requirements/test.txt, sphinx
 sphinxcontrib-devhelp==1.0.2  # via -r requirements/test.txt, sphinx
 sphinxcontrib-htmlhelp==1.0.3  # via -r requirements/test.txt, sphinx
@@ -68,16 +68,16 @@ sphinxcontrib-jsmath==1.0.1  # via -r requirements/test.txt, sphinx
 sphinxcontrib-qthelp==1.0.3  # via -r requirements/test.txt, sphinx
 sphinxcontrib-serializinghtml==1.1.4  # via -r requirements/test.txt, sphinx
 sqlparse==0.4.1           # via -r requirements/test.txt, django
-stevedore==3.2.2          # via -r requirements/test.txt, doc8
+stevedore==3.3.0          # via -r requirements/test.txt, doc8
 text-unidecode==1.3       # via -r requirements/test.txt, python-slugify
-toml==0.10.2              # via -r requirements/ci.txt, tox
+toml==0.10.2              # via -r requirements/ci.txt, -r requirements/test.txt, pylint, tox
 tox-battery==0.6.1        # via -r requirements/dev.in
-tox==3.20.1               # via -r requirements/ci.txt, tox-battery
+tox==3.21.0               # via -r requirements/ci.txt, tox-battery
 urllib3==1.26.2           # via -r requirements/test.txt, requests
-virtualenv==20.2.1        # via -r requirements/test.txt, -r requirements/ci.txt, tox
+virtualenv==20.3.0        # via -r requirements/ci.txt, -r requirements/test.txt, tox
 wcwidth==0.2.5            # via -r requirements/test.txt, pytest
 webencodings==0.5.1       # via -r requirements/test.txt, bleach
-wrapt==1.11.2             # via -r requirements/test.txt, astroid
+wrapt==1.12.1             # via -r requirements/test.txt, astroid
 
 # The following packages are considered to be unsafe in a requirements file:
 # pip

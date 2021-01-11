@@ -5,16 +5,16 @@
 #    make upgrade
 #
 arrow==0.13.2             # via -c requirements/constraints.txt, jinja2-time
-astroid==2.3.3            # via pylint, pylint-celery
+astroid==2.4.2            # via pylint, pylint-celery
 binaryornot==0.4.4        # via cookiecutter
-certifi==2020.11.8        # via requests
-chardet==3.0.4            # via binaryornot, requests
+certifi==2020.12.5        # via requests
+chardet==4.0.0            # via binaryornot, requests
 click-log==0.3.2          # via edx-lint
 click==7.1.2              # via click-log, cookiecutter, edx-lint
 cookiecutter==1.7.2       # via -r requirements/base.in
-edx-lint==1.5.2           # via -r requirements/base.in
+edx-lint==1.6             # via -r requirements/base.in
 idna==2.10                # via requests
-isort==4.3.21             # via pylint
+isort==5.7.0              # via pylint
 jinja2-time==0.2.0        # via cookiecutter
 jinja2==2.11.2            # via cookiecutter, jinja2-time
 lazy-object-proxy==1.4.3  # via astroid
@@ -22,13 +22,14 @@ markupsafe==1.1.1         # via cookiecutter, jinja2
 mccabe==0.6.1             # via pylint
 poyo==0.5.0               # via cookiecutter
 pylint-celery==0.3        # via edx-lint
-pylint-django==2.0.11     # via edx-lint
+pylint-django==2.3.0      # via edx-lint
 pylint-plugin-utils==0.6  # via pylint-celery, pylint-django
-pylint==2.4.4             # via edx-lint, pylint-celery, pylint-django, pylint-plugin-utils
+pylint==2.6.0             # via edx-lint, pylint-celery, pylint-django, pylint-plugin-utils
 python-dateutil==2.8.1    # via arrow
 python-slugify==4.0.1     # via cookiecutter
-requests==2.25.0          # via cookiecutter
+requests==2.25.1          # via cookiecutter
 six==1.15.0               # via astroid, cookiecutter, edx-lint, python-dateutil
 text-unidecode==1.3       # via python-slugify
+toml==0.10.2              # via pylint
 urllib3==1.26.2           # via requests
-wrapt==1.11.2             # via astroid
+wrapt==1.12.1             # via astroid

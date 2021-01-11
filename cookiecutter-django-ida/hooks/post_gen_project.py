@@ -41,7 +41,7 @@ def remove(path):
     elif os.path.isdir(full_path):
         shutil.rmtree(full_path)
     else:
-        print("{path} not in cookiecutter output".format(path=full_path))
+        print(f"{full_path} not in cookiecutter output")
 
 
 # Use Python template to get python files
