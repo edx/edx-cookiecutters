@@ -13,17 +13,17 @@ if __name__ == '__main__':
     sys.path.append(PWD)
     try:
         from django.core.management import execute_from_command_line  # pylint: disable=wrong-import-position
-    except ImportError:
+    except ImportError as e:
         # The above import may fail for some other reason. Ensure that the
         # issue is really that Django is missing to avoid masking other
         # exceptions on Python 2.
         try:
             import django  # pylint: disable=unused-import, wrong-import-position
-        except ImportError:
+        except ImportError as exc:
             raise ImportError(
                 "Couldn't import Django. Are you sure it's installed and "
                 "available on your PYTHONPATH environment variable? Did you "
                 "forget to activate a virtual environment?"
-            )
-        raise
+            ) from exc
+        raise e
     execute_from_command_line(sys.argv)

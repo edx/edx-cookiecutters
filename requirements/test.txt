@@ -4,77 +4,250 @@
 #
 #    make upgrade
 #
-alabaster==0.7.12         # via sphinx
-appdirs==1.4.4            # via virtualenv
-arrow==0.13.2             # via -c requirements/constraints.txt, -r requirements/base.txt, jinja2-time, pytest-cookies
-astroid==2.4.2            # via -r requirements/base.txt, pylint, pylint-celery
-attrs==20.3.0             # via pytest
-babel==2.9.0              # via sphinx
-binaryornot==0.4.4        # via -r requirements/base.txt, cookiecutter
-bleach==3.2.1             # via readme-renderer
-certifi==2020.12.5        # via -r requirements/base.txt, requests
-chardet==4.0.0            # via -r requirements/base.txt, binaryornot, doc8, requests
-click-log==0.3.2          # via -r requirements/base.txt, edx-lint
-click==7.1.2              # via -r requirements/base.txt, click-log, cookiecutter, edx-lint
-cookiecutter==1.7.2       # via -r requirements/base.txt, pytest-cookies
-distlib==0.3.1            # via virtualenv
-django-model-utils==4.1.1  # via -r requirements/test.in
-django==2.2.17            # via -c requirements/constraints.txt, -r requirements/test.in, django-model-utils
-doc8==0.8.1               # via -r requirements/test.in
-docutils==0.16            # via doc8, readme-renderer, restructuredtext-lint, sphinx
-edx-lint==1.6             # via -r requirements/base.txt, -r requirements/test.in
-edx-sphinx-theme==1.6.0   # via -r requirements/test.in
-filelock==3.0.12          # via virtualenv
-idna==2.10                # via -r requirements/base.txt, requests
-imagesize==1.2.0          # via sphinx
-isort==5.7.0              # via -r requirements/base.txt, -r requirements/test.in, pylint
-jinja2-time==0.2.0        # via -r requirements/base.txt, cookiecutter
-jinja2==2.11.2            # via -r requirements/base.txt, cookiecutter, jinja2-time, sphinx
-lazy-object-proxy==1.4.3  # via -r requirements/base.txt, astroid
-markupsafe==1.1.1         # via -r requirements/base.txt, cookiecutter, jinja2
-mccabe==0.6.1             # via -r requirements/base.txt, pylint
-more-itertools==8.6.0     # via pytest
-packaging==20.8           # via bleach, pytest, sphinx
-pbr==5.5.1                # via stevedore
-pluggy==0.13.1            # via pytest
-poyo==0.5.0               # via -r requirements/base.txt, cookiecutter
-py==1.10.0                # via pytest
-pycodestyle==2.6.0        # via -r requirements/test.in
-pydocstyle==5.1.1         # via -r requirements/test.in
-pygments==2.7.3           # via doc8, readme-renderer, sphinx
-pylint-celery==0.3        # via -r requirements/base.txt, edx-lint
-pylint-django==2.3.0      # via -r requirements/base.txt, edx-lint
-pylint-plugin-utils==0.6  # via -r requirements/base.txt, pylint-celery, pylint-django
-pylint==2.6.0             # via -r requirements/base.txt, edx-lint, pylint-celery, pylint-django, pylint-plugin-utils
-pyparsing==2.4.7          # via packaging
-pytest-cookies==0.5.1     # via -r requirements/test.in
-pytest==5.4.3             # via pytest-cookies
-python-dateutil==2.8.1    # via -r requirements/base.txt, arrow
-python-slugify==4.0.1     # via -r requirements/base.txt, cookiecutter
-pytz==2020.5              # via babel, django
-readme-renderer==28.0     # via -r requirements/test.in
-requests==2.25.1          # via -r requirements/base.txt, cookiecutter, sphinx
-restructuredtext-lint==1.3.2  # via doc8
-sh==1.14.1                # via -r requirements/test.in
-six==1.15.0               # via -r requirements/base.txt, astroid, bleach, cookiecutter, doc8, edx-lint, edx-sphinx-theme, python-dateutil, readme-renderer, virtualenv
-snowballstemmer==2.0.0    # via pydocstyle, sphinx
-sphinx-rtd-theme==0.5.1   # via -r requirements/test.in
-sphinx==3.4.3             # via -r requirements/test.in, edx-sphinx-theme, sphinx-rtd-theme
-sphinxcontrib-applehelp==1.0.2  # via sphinx
-sphinxcontrib-devhelp==1.0.2  # via sphinx
-sphinxcontrib-htmlhelp==1.0.3  # via sphinx
-sphinxcontrib-jsmath==1.0.1  # via sphinx
-sphinxcontrib-qthelp==1.0.3  # via sphinx
-sphinxcontrib-serializinghtml==1.1.4  # via sphinx
-sqlparse==0.4.1           # via django
-stevedore==3.3.0          # via doc8
-text-unidecode==1.3       # via -r requirements/base.txt, python-slugify
-toml==0.10.2              # via -r requirements/base.txt, pylint
-urllib3==1.26.2           # via -r requirements/base.txt, requests
-virtualenv==20.3.0        # via -r requirements/test.in
-wcwidth==0.2.5            # via pytest
-webencodings==0.5.1       # via bleach
-wrapt==1.12.1             # via -r requirements/base.txt, astroid
+alabaster==0.7.12
+    # via sphinx
+appdirs==1.4.4
+    # via virtualenv
+arrow==0.13.2
+    # via
+    #   -c requirements/constraints.txt
+    #   -r requirements/base.txt
+    #   jinja2-time
+    #   pytest-cookies
+astroid==2.4.2
+    # via
+    #   -r requirements/base.txt
+    #   pylint
+    #   pylint-celery
+attrs==20.3.0
+    # via pytest
+babel==2.9.0
+    # via sphinx
+binaryornot==0.4.4
+    # via
+    #   -r requirements/base.txt
+    #   cookiecutter
+bleach==3.2.1
+    # via readme-renderer
+certifi==2020.12.5
+    # via
+    #   -r requirements/base.txt
+    #   requests
+chardet==4.0.0
+    # via
+    #   -r requirements/base.txt
+    #   binaryornot
+    #   doc8
+    #   requests
+click-log==0.3.2
+    # via
+    #   -r requirements/base.txt
+    #   edx-lint
+click==7.1.2
+    # via
+    #   -r requirements/base.txt
+    #   click-log
+    #   cookiecutter
+    #   edx-lint
+cookiecutter==1.7.2
+    # via
+    #   -r requirements/base.txt
+    #   pytest-cookies
+distlib==0.3.1
+    # via virtualenv
+django-model-utils==4.1.1
+    # via -r requirements/test.in
+django==2.2.17
+    # via
+    #   -c requirements/constraints.txt
+    #   -r requirements/test.in
+    #   django-model-utils
+doc8==0.8.1
+    # via -r requirements/test.in
+docutils==0.16
+    # via
+    #   doc8
+    #   readme-renderer
+    #   restructuredtext-lint
+    #   sphinx
+edx-lint==1.6
+    # via
+    #   -r requirements/base.txt
+    #   -r requirements/test.in
+edx-sphinx-theme==1.6.0
+    # via -r requirements/test.in
+filelock==3.0.12
+    # via virtualenv
+idna==2.10
+    # via
+    #   -r requirements/base.txt
+    #   requests
+imagesize==1.2.0
+    # via sphinx
+isort==5.7.0
+    # via
+    #   -r requirements/base.txt
+    #   -r requirements/test.in
+    #   pylint
+jinja2-time==0.2.0
+    # via
+    #   -r requirements/base.txt
+    #   cookiecutter
+jinja2==2.11.2
+    # via
+    #   -r requirements/base.txt
+    #   cookiecutter
+    #   jinja2-time
+    #   sphinx
+lazy-object-proxy==1.4.3
+    # via
+    #   -r requirements/base.txt
+    #   astroid
+markupsafe==1.1.1
+    # via
+    #   -r requirements/base.txt
+    #   cookiecutter
+    #   jinja2
+mccabe==0.6.1
+    # via
+    #   -r requirements/base.txt
+    #   pylint
+more-itertools==8.6.0
+    # via pytest
+packaging==20.8
+    # via
+    #   bleach
+    #   pytest
+    #   sphinx
+pbr==5.5.1
+    # via stevedore
+pluggy==0.13.1
+    # via pytest
+poyo==0.5.0
+    # via
+    #   -r requirements/base.txt
+    #   cookiecutter
+py==1.10.0
+    # via pytest
+pycodestyle==2.6.0
+    # via -r requirements/test.in
+pydocstyle==5.1.1
+    # via -r requirements/test.in
+pygments==2.7.4
+    # via
+    #   doc8
+    #   readme-renderer
+    #   sphinx
+pylint-celery==0.3
+    # via
+    #   -r requirements/base.txt
+    #   edx-lint
+pylint-django==2.3.0
+    # via
+    #   -r requirements/base.txt
+    #   edx-lint
+pylint-plugin-utils==0.6
+    # via
+    #   -r requirements/base.txt
+    #   pylint-celery
+    #   pylint-django
+pylint==2.6.0
+    # via
+    #   -r requirements/base.txt
+    #   edx-lint
+    #   pylint-celery
+    #   pylint-django
+    #   pylint-plugin-utils
+pyparsing==2.4.7
+    # via packaging
+pytest-cookies==0.5.1
+    # via -r requirements/test.in
+pytest==5.4.3
+    # via pytest-cookies
+python-dateutil==2.8.1
+    # via
+    #   -r requirements/base.txt
+    #   arrow
+python-slugify==4.0.1
+    # via
+    #   -r requirements/base.txt
+    #   cookiecutter
+pytz==2020.5
+    # via
+    #   babel
+    #   django
+readme-renderer==28.0
+    # via -r requirements/test.in
+requests==2.25.1
+    # via
+    #   -r requirements/base.txt
+    #   cookiecutter
+    #   sphinx
+restructuredtext-lint==1.3.2
+    # via doc8
+sh==1.14.1
+    # via -r requirements/test.in
+six==1.15.0
+    # via
+    #   -r requirements/base.txt
+    #   astroid
+    #   bleach
+    #   cookiecutter
+    #   doc8
+    #   edx-lint
+    #   edx-sphinx-theme
+    #   python-dateutil
+    #   readme-renderer
+    #   virtualenv
+snowballstemmer==2.0.0
+    # via
+    #   pydocstyle
+    #   sphinx
+sphinx-rtd-theme==0.5.1
+    # via -r requirements/test.in
+sphinx==3.4.3
+    # via
+    #   -r requirements/test.in
+    #   edx-sphinx-theme
+    #   sphinx-rtd-theme
+sphinxcontrib-applehelp==1.0.2
+    # via sphinx
+sphinxcontrib-devhelp==1.0.2
+    # via sphinx
+sphinxcontrib-htmlhelp==1.0.3
+    # via sphinx
+sphinxcontrib-jsmath==1.0.1
+    # via sphinx
+sphinxcontrib-qthelp==1.0.3
+    # via sphinx
+sphinxcontrib-serializinghtml==1.1.4
+    # via sphinx
+sqlparse==0.4.1
+    # via django
+stevedore==3.3.0
+    # via doc8
+text-unidecode==1.3
+    # via
+    #   -r requirements/base.txt
+    #   python-slugify
+toml==0.10.2
+    # via
+    #   -r requirements/base.txt
+    #   pylint
+urllib3==1.26.2
+    # via
+    #   -r requirements/base.txt
+    #   requests
+virtualenv==20.3.1
+    # via -r requirements/test.in
+wcwidth==0.2.5
+    # via pytest
+webencodings==0.5.1
+    # via bleach
+wrapt==1.12.1
+    # via
+    #   -r requirements/base.txt
+    #   astroid
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
