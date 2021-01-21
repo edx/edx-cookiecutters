@@ -18,6 +18,8 @@ def run_in_virtualenv(shell_script):
         venv_path = str(Path(parent_dir) / 'venv')
         try:
             subprocess.check_call(['virtualenv', '-p', sys.executable, '--clear', venv_path])
+            # TODO: Remove the following line when both the latest versions of pip and pip-tools work fine together
+            subprocess.check_call(f'. {venv_path}/bin/activate; pip install pip==20.0.2', env={}, shell=True)
             subprocess.check_call(f'. {venv_path}/bin/activate; {shell_script}', env={}, shell=True)
         finally:
             if shutil.rmtree.avoids_symlink_attacks:
